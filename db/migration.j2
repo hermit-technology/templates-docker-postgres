@@ -1,0 +1,7 @@
+-- create schemas for database '{{ database }}'
+{% include 'ddl/authentication/_schema.sql' %}
+{% include 'ddl/postgrest/_schema.sql' %}
+
+-- create access roles
+{% include 'roles/web_anon.sql' %}
+{% include 'roles/authenticator.sql' %}
